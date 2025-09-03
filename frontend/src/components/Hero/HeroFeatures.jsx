@@ -1,4 +1,3 @@
-// src/components/Hero/HeroFeatures.jsx
 const features = [
     { 
         title: "Kanban Workflow", 

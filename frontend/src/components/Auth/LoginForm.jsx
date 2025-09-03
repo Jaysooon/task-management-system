@@ -74,13 +74,13 @@ export default function Login() {
                       to="/register"
                       className="ml-1 underline text-blue-500 hover:text-blue-900"
                     >
-                      Register
+                      Sign up
                     </Link>
                   </p>
                 </div>
                 <div className="block">
                   <button className="w-full rounded-2xl bg-green-700 text-white px-5 py-2 hover:bg-green-950">
-                    Login
+                    Log in
                   </button>
                 </div>
               </form>

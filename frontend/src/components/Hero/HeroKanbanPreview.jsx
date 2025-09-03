@@ -1,4 +1,3 @@
-// src/components/Hero/HeroKanbanPreview.jsx
 import { useState, useEffect } from "react";
 
 // Mock data for the hero demo

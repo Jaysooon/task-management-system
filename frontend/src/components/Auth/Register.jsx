@@ -185,7 +185,7 @@ export default function Register() {
                     className="w-full rounded-2xl bg-blue-700 text-white px-5 py-2 hover:bg-blue-950 disabled:opacity-50 disabled:cursor-not-allowed" 
                     disabled={submitting}
                   >
-                    {submitting ? "Submitting..." : "Register"}
+                    {submitting ? "Submitting..." : "Sign up"}
                   </button>
                 </div>
               </form>

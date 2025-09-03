@@ -83,7 +83,7 @@ const Hero = () => {
               Visual workflow management with drag-and-drop functionality across seven workflow stages.
             </p>
             <div className="grid grid-cols-2 gap-1 text-xs">
-              {["Backlog", "Ready For Development", "In Progress", "Ready for Review", "Reviewed", "Impediments", "Done"].map((status, i) => (
+              {["Backlog", "Ready For Development", "In Progress", "Ready For Review", "Reviewed", "Impediments", "Done"].map((status, i) => (
                 <div key={status} className="rounded bg-zinc-100 dark:bg-zinc-800 px-2 py-1 text-center">
                   {status}
                 </div>
