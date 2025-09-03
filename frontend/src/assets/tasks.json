@@ -1,0 +1,37 @@
+[
+  {
+    "status": "Done",
+    "statusColor": "bg-green-500",
+    "title": "Design homepage",
+    "due": "2024-06-10",
+    "assignee": "Alex"
+  },
+  {
+    "status": "In Progress",
+    "statusColor": "bg-blue-500",
+    "title": "API integration",
+    "due": "2024-06-12",
+    "assignee": "Sam"
+  },
+  {
+    "status": "Pending",
+    "statusColor": "bg-amber-500",
+    "title": "Write docs",
+    "due": "2024-06-15",
+    "assignee": "Jamie"
+  },
+  {
+    "status": "In Progress",
+    "statusColor": "bg-blue-500",
+    "title": "Create Login Page",
+    "due": "2024-06-15",
+    "assignee": "Taylor"
+  },
+  {
+    "status": "Done",
+    "statusColor": "bg-green-500",
+    "title": "Create landing page",
+    "due": "2024-06-15",
+    "assignee": "John"
+  }
+]
