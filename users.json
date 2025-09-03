@@ -1,9 +1,0 @@
-[
-  {
-    "username": "admin",
-    "email": "admin",
-    "password": "$2b$10$zTQUW6a5Y5bC9.8nE/NVneUsp0jEjJ8ZkX1C6M10K1dG5L8Gwlz9K", 
-    "role": "admin",
-    "createdAt": { "$date": "2025-08-28T10:00:00Z" }
-  }
-]
