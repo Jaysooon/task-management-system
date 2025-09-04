@@ -9,6 +9,7 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  // base: '/task-management-system/',
   server: {
     port: 3000
   }

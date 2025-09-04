@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "api": "json-server --watch db.json --port 5000",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",

@@ -1,4 +1,5 @@
 // src/components/Dashboard/Toolbar.jsx
+import {FaPlus} from "react-icons/fa"
 export default function Toolbar({ user, users, filters, onFiltersChange, onAddTask }) {
   const ALL_STATUSES = [
     "Backlog",
@@ -47,7 +48,10 @@ export default function Toolbar({ user, users, filters, onFiltersChange, onAddTa
 
       {(user?.role === "admin" || user?.role === "product_owner") && (
         <div className="flex items-center lg:ml-4">
-          <button onClick={onAddTask} className="rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Add Task</button>
+          <button onClick={onAddTask} className="rounded-xl inline-flex items-center bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+            <FaPlus className="h-4 w-4" />
+            Add Task
+          </button>
         </div>
       )}
     </div>
