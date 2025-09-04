@@ -1,4 +1,5 @@
 {
+  "homepage": "https://jaysooon.github.io/task-management-system",
   "name": "task-management-system",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +9,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "api": "json-server --watch db.json --port 5000"
+    "api": "json-server --watch db.json --port 5000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
@@ -28,6 +31,7 @@
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
     "json-server": "^1.0.0-beta.3",
     "vite": "^7.1.2"

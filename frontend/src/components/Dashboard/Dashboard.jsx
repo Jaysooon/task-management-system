@@ -220,7 +220,7 @@ export default function Dashboard() {
           onAddTask={handleAddTask}
         />
 
-        <AnalyticsBoard tasks={visibleTasks} />
+        <AnalyticsBoard tasks={visibleTasks} usersById={usersById}/>
 
         <KanbanBoard
           tasks={visibleTasks}

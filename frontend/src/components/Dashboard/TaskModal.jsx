@@ -6,6 +6,7 @@ import {
   deleteTask as apiDeleteTask,
   addComment,
 } from "../../api/api";
+import { FaPlus, FaTrash, FaSave, FaTimes } from "react-icons/fa";
 
 const STATUS = [
   "Backlog",
@@ -193,7 +194,7 @@ export default function TaskModal({
               onClick={onClose}
               className="rounded-xl border px-3 py-1.5 border-zinc-200 hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-700"
             >
-              ✕
+              <FaTimes/>
             </button>
           </div>
         </div>
@@ -338,8 +339,9 @@ export default function TaskModal({
                   <button
                     onClick={handleAddComment}
                     disabled={!newComment.trim()}
-                    className="rounded-lg bg-blue-600 px-3 py-2 text-sm text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="rounded-lg inline-flex items-center gap-2 bg-blue-600 px-3 py-2 text-sm text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
+                    <FaPlus className="h-4 w-4"/>
                     Add
                   </button>
                 </div>
@@ -355,8 +357,9 @@ export default function TaskModal({
               <button
                 onClick={handleDelete}
                 disabled={loading}
-                className="rounded-xl bg-red-600 px-4 py-2 text-white hover:bg-red-700 disabled:opacity-50"
+                className="inline-flex items-center gap-2 rounded-xl bg-red-600 px-4 py-2 text-white hover:bg-red-700 disabled:opacity-50"
               >
+                <FaTrash className="h4 w-4"/>
                 {loading ? "Deleting..." : "Delete Task"}
               </button>
             ) : (
@@ -366,16 +369,18 @@ export default function TaskModal({
             <div className="flex gap-3">
               <button
                 onClick={onClose}
-                className="rounded-xl border px-4 py-2 border-zinc-200 hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
+                className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 border-zinc-200 hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-700"
               >
+                <FaTimes className="h4 w-4"/>
                 Cancel
               </button>
               {(canEditAll || canDevChangeStatus) && (
                 <button
                   onClick={handleSave}
                   disabled={loading}
-                  className="rounded-xl bg-blue-600 px-5 py-2 text-white hover:bg-blue-700 disabled:opacity-50"
+                  className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2 text-white hover:bg-blue-700 disabled:opacity-50"
                 >
+                  <FaSave className="h4 w-4"/>
                   {loading ? "Saving..." : "Save Changes"}
                 </button>
               )}

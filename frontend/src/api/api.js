@@ -145,6 +145,22 @@ export async function addComment(taskId, { text }) {
   });
 }
 
+// Update user profile (PATCH request for partial updates)
+export async function updateUserProfile(userId, profileData) {
+  return authCall(`/users/${userId}`, {
+    method: 'PUT', // Using PUT for complete profile update
+    body: JSON.stringify(profileData)
+  });
+}
+
+// Alternative: Patch user for partial updates
+export async function patchUser(userId, updates) {
+  return authCall(`/users/${userId}`, {
+    method: 'PATCH',
+    body: JSON.stringify(updates)
+  });
+}
+
 // --- Admin / Registrations
 export async function fetchRegistrations() {
   return authCall("/registrations");
@@ -202,5 +218,8 @@ export default {
   deleteTask,
   getTask,
   addComment,
+  createUser,
+  updateUserProfile,
+  patchUser,
 };
 
