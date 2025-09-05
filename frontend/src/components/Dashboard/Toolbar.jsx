@@ -14,7 +14,7 @@ export default function Toolbar({ user, users, filters, onFiltersChange, onAddTa
   function setFilter(k, v) { onFiltersChange({...filters, [k]: v}); }
 
   return (
-    <div className="mb-4 flex flex-col gap-3 rounded-2xl border border-zinc-200 bg-white p-3 dark:border-zinc-700 dark:bg-zinc-800 lg:flex-row lg:items-end lg:justify-between">
+    <div className="animate-fade-in-scale mb-4 flex flex-col gap-3 rounded-2xl border border-zinc-200 bg-white p-3 dark:border-zinc-700 dark:bg-zinc-800 lg:flex-row lg:items-end lg:justify-between">
       <div className="grid w-full gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <label className="block">
           <span className="text-xs text-zinc-500">Search</span>

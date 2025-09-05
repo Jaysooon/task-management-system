@@ -164,7 +164,7 @@ export default function KanbanBoard({
   }
 
   return (
-    <section className="mt-6">
+    <section className="animate-fade-in-scale mt-6">
       <h2 className="text-2xl font-bold mb-2">Kanban Board</h2>
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-7">
         {COLUMNS.map((col) => (

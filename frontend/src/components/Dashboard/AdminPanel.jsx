@@ -225,7 +225,7 @@ export default function AdminPanel() {
       <Navbar isHidden={false} loggedIn={true} />
       <main className="mx-auto max-w-6xl px-4 py-8">
         {/* Header */}
-        <div className="mb-6 flex items-center justify-between">
+        <div className="animate-fade-in-right mb-6 flex items-center justify-between">
           <a
             href="/dashboard"
             className="text-sm font-semibold text-black dark:text-zinc-100 inline-flex items-center hover:text-zinc-500"
@@ -241,7 +241,7 @@ export default function AdminPanel() {
           </button>
         </div>
 
-        <div className="mb-6">
+        <div className="animate-fade-in-right mb-6">
           <h2 className="text-3xl font-bold">Admin Panel</h2>
           <p className="text-zinc-600 dark:text-zinc-300">
             Manage user registrations and system users
@@ -256,7 +256,7 @@ export default function AdminPanel() {
         )}
 
         {/* Statistics Summary */}
-        <section className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section className="animate-fade-in-up-stagger mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-800">
             <div className="flex items-center">
               <div className="flex-shrink-0">
@@ -301,7 +301,7 @@ export default function AdminPanel() {
         </section>
 
         {/* Pending Registrations Section */}
-        <section className="mt-8">
+        <section className="animate-fade-in-scale animate-fade-in-scale mt-8">
           <h3 className="text-xl font-semibold mb-4">Pending Registrations</h3>
           <div className="rounded-2xl border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800">
             {loading ? (
@@ -385,7 +385,7 @@ export default function AdminPanel() {
         </section>
 
         {/* User Management Section */}
-        <section className="mt-8">
+        <section className="animate-fade-in-up mt-8">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-xl font-semibold">System Users</h3>
             <button

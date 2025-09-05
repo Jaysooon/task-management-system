@@ -77,7 +77,7 @@ export default function AnalyticsBoard({ tasks, usersById }) {
   };
   return (
     <section className="mb-4 grid gap-4 lg:grid-cols-3">
-      <div className="rounded-3xl border border-zinc-200 bg-white p-4 dark:border-zinc-700 dark:bg-zinc-800 lg:col-span-2">
+      <div className="animate-fade-in-up rounded-3xl border border-zinc-200 bg-white p-4 dark:border-zinc-700 dark:bg-zinc-800 lg:col-span-2">
         <h4 className="mb-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200">
           Tasks per Status
         </h4>
@@ -94,7 +94,7 @@ export default function AnalyticsBoard({ tasks, usersById }) {
         </div>
       </div>
 
-      <div className="rounded-3xl border border-zinc-200 bg-white p-4 dark:border-zinc-700 dark:bg-zinc-800">
+      <div className="animate-fade-in-right rounded-3xl border border-zinc-200 bg-white p-4 dark:border-zinc-700 dark:bg-zinc-800">
         <h4 className="mb-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200">
           Tasks per Assignee
         </h4>

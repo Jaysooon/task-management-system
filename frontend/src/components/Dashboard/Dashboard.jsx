@@ -4,7 +4,7 @@ import { fetchTasks, fetchUsers, createTask, patchTask } from "../../api/api";
 import { useAuth } from "../../context/AuthContext";
 import AnalyticsBoard from "./AnalyticsBoard";
 import KanbanBoard from "./KanbanBoard";
-import TaskModal from "./TaskModal";
+import TaskModal from "../Modals/TaskModal";
 import Toolbar from "./Toolbar";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -58,8 +58,6 @@ export default function Dashboard() {
     if (user.role === "admin") return tasks;
     if (user.role === "product_owner") return tasks;
     if (user.role === "developer") {
-      // Convert both to numbers for proper comparison
-      // return tasks.filter((t) => t.assigneeId === user._id);
       return tasks.filter((t) => String(t.assigneeId) === String(user._id));
     }
     return tasks;
@@ -186,7 +184,7 @@ export default function Dashboard() {
     <>
       <Navbar isHidden={false} loggedIn={true} />
       <main className="mx-auto max-w-7xl px-4 py-8">
-        <header className="mb-4 flex flex-wrap items-center justify-between gap-2">
+        <header className="animate-fade-in-scale mb-4 flex flex-wrap items-center justify-between gap-2">
           <div>
             <h2 className="text-2xl font-bold">Dashboard</h2>
             <p className="text-sm text-zinc-600 dark:text-zinc-300">
