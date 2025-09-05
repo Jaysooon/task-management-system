@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { FaDoorOpen } from "react-icons/fa6";
+import LoginModal from "./Modals/LoginModal";
+import RegisterModal from "./Modals/RegisterModal";
 const Navbar = ({ isHidden, loggedIn }) => {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
   const { logout } = useAuth();
   const appName = "Task Manager";
   const linkClass =
@@ -14,44 +18,49 @@ const Navbar = ({ isHidden, loggedIn }) => {
             <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
               <a className="flex flex-shrink-0 items-center mr-4" to="/">
                 {/* <img className="h-10 w-auto" src={logo} alt="React Jobs" /> */}
-                <span className="text-amber-600 opacity-85 text-xl font-bold ml-2">
+                <span className="text-amber-600 text-xl font-bold ml-2">
                   {appName}
                 </span>
               </a>
               <div className={!isHidden && loggedIn ? "md:ml-auto" : "hidden"}>
                 <div className="relative flex items-center space-x-0 ">
-                  <Link
+                  <button
                     onClick={logout}
                     className={linkClass}
                     style={{ animation: "fadeIn 1s" }}
                   >
                     Log out
-                  </Link>
+                  </button>
                 </div>
               </div>
               <div className={!isHidden && !loggedIn ? "md:ml-auto" : "hidden"}>
                 <div className="relative flex items-center space-x-0 ">
-                  <Link
-                    to="/login"
+                  <button
+                    onClick={() => setShowLoginModal(true)}
                     className={`${linkClass} mr-2`}
-                    style={{ animation: "fadeIn 1s" }}
                   >
                     Log in
-                  </Link>
-                  {/* <span className="mx-2 h-6 w-1 rounded bg-amber-600 inline-block" /> */}
-                  <Link
-                    to="/register"
+                  </button>
+                  <button
+                    onClick={() => setShowRegisterModal(true)}
                     className={`${linkClass} bg-amber-600`}
-                    style={{ animation: "fadeIn 1s" }}
                   >
                     Sign up
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </nav>
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+      />
+      <RegisterModal
+        isOpen={showRegisterModal}
+        onClose={() => setShowRegisterModal(false)}
+      />
     </>
   );
 };
