@@ -9,8 +9,11 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  // base: '/task-management-system/',
+  base: '/',
   server: {
     port: 3000
+  },
+  build: {
+    outDir: 'dist'
   }
 })
